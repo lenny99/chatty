@@ -1,15 +1,10 @@
-entity User {
-	username String,
-    password String
-}
-
 entity Chatroom {
-	chatroomName String,
+	name String,
 }
 
 entity Message {
 	content String,
-    timeSend Date
+    timeSend LocalDate
 }
 
 relationship ManyToOne {
@@ -17,5 +12,5 @@ relationship ManyToOne {
 }
 
 relationship ManyToMany {
-	User{chatrooms} to Chatroom{users}
+    Chatroom{members} to User{chatrooms}
 }

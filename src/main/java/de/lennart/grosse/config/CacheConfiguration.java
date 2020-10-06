@@ -48,6 +48,9 @@ public class CacheConfiguration {
             createCache(cm, de.lennart.grosse.domain.User.class.getName());
             createCache(cm, de.lennart.grosse.domain.Authority.class.getName());
             createCache(cm, de.lennart.grosse.domain.User.class.getName() + ".authorities");
+            createCache(cm, de.lennart.grosse.domain.Chatroom.class.getName());
+            createCache(cm, de.lennart.grosse.domain.Chatroom.class.getName() + ".members");
+            createCache(cm, de.lennart.grosse.domain.Message.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
