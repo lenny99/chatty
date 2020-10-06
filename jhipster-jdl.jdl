@@ -1,0 +1,21 @@
+entity User {
+	username String,
+    password String
+}
+
+entity Chatroom {
+	chatroomName String,
+}
+
+entity Message {
+	content String,
+    timeSend Date
+}
+
+relationship ManyToOne {
+	Message{user} to User
+}
+
+relationship ManyToMany {
+	User{chatrooms} to Chatroom{users}
+}
